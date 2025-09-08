@@ -9,3 +9,6 @@ If you enter user name "altest_userice" and password "secure_password", it'll su
 
 There are different agent types -
 1. Reflection Agents ( code included)
+
+   <img width="383" height="296" alt="image" src="https://github.com/user-attachments/assets/c4d2a808-3175-4680-992b-bde6935fc829" />
+
