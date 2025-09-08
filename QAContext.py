@@ -1,17 +1,8 @@
 from langchain_openai import ChatOpenAI
 from langchain_ibm import ChatWatsonx
+from typing import TypedDict, Optional
 
-openai_llm = ChatOpenAI(
-    model="gpt-4.1-nano",
-    api_key = "your openai api key here",
-)
 
-watsonx_llm = ChatWatsonx(
-    model_id="ibm/granite-3-2-8b-instruct",
-    url="https://us-south.ml.cloud.ibm.com",
-    project_id="your project id associated with the API key",
-    api_key="your watsonx.ai api key here",
-)
 
 # Define the structure of the QA state
 class QAState(TypedDict):
