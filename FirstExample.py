@@ -74,7 +74,7 @@ def success_node(state):
 
 # Define the failure node
 def failure_node(state):
-    return {"output": "Not Successfull, please try again!"}
+    return {"output": "Not Successful, please try again!"}
 	
 def router(state):
     if state['is_authenticated']:
