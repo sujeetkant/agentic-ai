@@ -1,3 +1,9 @@
+# this example uses a reflction agent.
+# It starts with a linkedin in post and it improves post content iteratively.
+# It runs for 6 iterations.
+# Basically, it makes the output more and more verbose.
+
+
 from langchain_ibm import ChatWatsonx
 from langchain_core.messages import BaseMessage, HumanMessage
 from langgraph.graph import END, MessageGraph, StateGraph
@@ -89,9 +95,11 @@ graph.add_conditional_edges("generate", should_continue)
 workflow = graph.compile()
 inputs = HumanMessage(content="""Write a linkedin post on getting a software developer job at IBM under 160 characters""")
 response = workflow.invoke(inputs)
+
 response[1].content
 response[2].content
 response[-1].content
+
 
 
 
