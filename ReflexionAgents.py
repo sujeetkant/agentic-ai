@@ -26,13 +26,13 @@ from langgraph.graph import END, MessageGraph
 # )
 
 class Reflection(BaseModel):
-	missing: str = Field(description="What information is missing")
-	superfluous: str = Field(description="What information is unnecessary")
+	missing: str = Field(description = "What information is missing")
+	superfluous: str = Field(description = "What information is unnecessary")
 
 class AnswerQuestion(BaseModel):
-	answer: str = Field(description="Main response to the question")
-	reflection: Reflection = Field(description="Self-critique of the answer")
-	search_queries: List[str] = Field(description="Queries for additional research")
+	answer: str = Field(description = "Main response to the question")
+	reflection: Reflection = Field(description = "Self-critique of the answer")
+	search_queries: List[str] = Field(description = "Queries for additional research")
       
 
 def _set_if_undefined(var: str) -> None:
